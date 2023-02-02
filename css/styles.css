@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800;9..144,900&family=Montserrat:wght@500;600;700;800;900&display=swap');
+
+:root {
+    --white: #ffffff;
+    --darkgrey: #747682;
+    --mediumlightgrey: #707176;
+    --darkgreen: #3D8168;
+    --black: #000000;
+    --bluishblack: #242A31;
+    --cream: #F2E9E2;
+}
+
+*, a{
+    color:var(--black);
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0px 0px 0px 0px;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--cream);
+}
+
+ .card-container { /*Mobile-First*/
+    background-color: var(--white);
+    border-radius: 10px;
+    margin: 30px 15px;
+    width: 344px;
+    height: 600px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.image-content {
+    height: 250px;
+    background-image: url(../images/image-product-mobile.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.full-content {
+    margin: 20px;
+}
+
+.top-content h2 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--mediumlightgrey);
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.top-content h1 {
+    color: var(--bluishblack);
+    font-family: 'Fraunces', serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    line-height: 36px;
+    margin: 10px auto;
+}
+
+.paragraph p {
+    color: var(--darkgrey);
+    margin: 20px 30px 5px auto;
+    line-height: 20px;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.amount {
+    display: grid;
+    /*two columns of 150px width size*/
+    grid-template-columns: repeat(2, 150px);
+    justify-content: start;
+    align-items: center;
+    margin: 20px auto 8px auto;
+}
+
+.amount .correct-val p {
+    font-family: 'Fraunces', serif;
+    color: var(--darkgreen);
+    font-weight: 800;
+    font-size: 2.5em;
+}
+
+.amount .strikethrough-val p {
+    color: var(--mediumlightgrey);
+    text-decoration: line-through;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    background-color: var(--darkgreen);
+    border: none;
+    border-radius: 8px;
+    height: 50px;
+    margin-top: 16px;
+    padding: auto 80px auto 80px;
+    width: 300px;
+}
+
+.button .button-pd {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.button svg {
+    height: 16px;
+    width: 15px;
+    /*centrar dentro de un div*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button p {
+    min-width: 100px;
+    font-size: 1.2em;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.button:hover {
+    background-color: var(--mediumlightgrey);
+}
+
+/*RESPONSIVE FOR DESKTOP > 768PX*/
+
+@media (min-width: 768px){
+    .card-container {
+        grid-template-rows: 0;
+        grid-template-columns: repeat(2, 1fr);
+        width: 600px;
+        height: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 150px;
+        margin-bottom: auto;
+     }
+     .image-content {
+        width: 300px;
+        height: 450px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius:0px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        background-image: url(../images/image-product-desktop.jpg);
+     }
+     .full-content {
+        margin: 40px 30px;
+        max-width: 250px;
+     }
+     .paragraph p {
+        margin-right: 40px;
+     }
+     .button {
+        width: 240px;
+        margin-top: 20px;
+        padding-left: 60px;
+        padding-right: 60px;
+     }
+}
+
+
+
